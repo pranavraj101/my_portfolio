@@ -1,38 +1,261 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body, .app-root {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  /* Webkit browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 5px; /* Set the width as per your preference */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #693B93; /* Set the color of the thumb */
+    border-radius: 15px; /* Set border-radius for a rounded look */
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #1A0B2E; /* Set the color of the thumb on hover */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #11071F; 
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 20px;
+  background-color: #f0f0f0; /* Set your desired background color */
+  height: 10vh;
+  background-color: #1A0B2E;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  width: 30px; /* Set your desired logo width */
+  height: 30px; /* Set your desired logo height */
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo span {
+  font-size: 1.5rem; /* Set your desired font size */
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* Set your desired text color */
+  margin-right: 150px;
+  font-size: 20px; /* Set your desired font size */
+  padding-top: 43px;
+  padding-bottom: 43px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.home {
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: max-content;
+  background-color: #11071F;
+  padding-top: 10vh;
+  z-index: 1;
+}
+
+.home-text {
+  font-family: "Preahvihear";
+  color: #fff;
+  padding-top: 70px;
+  padding-left: 100px;
+}
+
+.experience {
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100%;
+  background-color: #11071F;
+  padding-top: 8vh;
+  font-family: "Preahvihear";
+  color: #fff;
+  z-index: 1;
+}
+
+.experience-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.workblock {
+  width: 47%; /* Adjust the width to leave some space between blocks */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  display: flex;
+  padding: 15px;
+  border-radius: 15px;
+  background: linear-gradient(110deg, #130428 19.95%, #251043 67.64%, #38126D 107.08%, #261045 156.61%, #190634 183.21%);
+  box-shadow: 4px 7px 26px 0px rgba(0, 0, 0, 0.12);
+}
+
+.workbtn {
+  border: #693B93 2px solid;
+  width: max-content;
+  font-size: 15px;
+  padding: 3px 12px;
+  border-radius: 10px;
+  font-family: 'Poppins';
+  background-color: #2C1250;
+  margin-top: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.workbtn:hover {
+  /* Change to your desired border color on hover */
+  background-color: #693B93;
+
+}
+
+.project{
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100%;
+  background-color: #11071F;
+  padding-top: 8vh;
+  font-family: "Preahvihear";
+  color: #fff;
+  z-index: 1;
+}
+
+.project-blocks{
+  display: flex;
+  justify-content: space-between;
+}
+.project-innerblock1 {
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.project-innerblock2 {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.project-innerblock2 img {
+  border-radius: 15px;
+  position: relative;
+  /* Adjust the overlap amount as needed */
+}
+
+
+.contact-us {
+  position: relative;
+  padding: 50px 10%;
+  color: #fff;
+  font-family: "Preahvihear";
+  background-color: #11071F;
+  height: 150%;
+}
+
+.contact-heading h1 {
+  font-size: 40px;
+}
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.gradient-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.contact-form {
+  margin-top: 20px;
+  width: 50%;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1A0B2E;
+  color: #fff;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2C1250;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #693B93;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .experience-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .workblock {
+    width: 100%; /* Adjust the width for smaller screens */
   }
 }
