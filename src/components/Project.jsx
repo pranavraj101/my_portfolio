@@ -7,13 +7,13 @@ const Project = () => {
   return (
     <div className='project'>
       <div >
-        <div style={{ fontSize: '40px', paddingTop: '50px', paddingLeft: '5%' }}>
+        <div style={{ fontSize: '250%', paddingTop: '50px', paddingLeft: '5%' }}>
           My Projects
         </div>
         <br />
         <div className='project-blocks'>
           <div style={{width:"50%"}}>
-            <div style={{fontSize:"30px", fontWeight:"600"}}>
+            <div style={{fontSize:"180%", fontWeight:"600", width:"max-content"}}>
               Example Project
             </div>
             <div  className='project-innerblock1'>
@@ -22,33 +22,51 @@ const Project = () => {
               information about each track. Create and save new playlists of
               recommended tracks based on your existing playlists and more.
             </div>
-            <img src={click} style={{height:"6%", padding:"5%"}} />
+            <img src={click} className='project-click'/>
           </div>
           <div className='project-innerblock2'>
-            <img src={gradiantbackground} style={{ position: 'absolute', height:"150%", zIndex: '-1', left:"-150px", top:"-100px" }} alt="Gradient Background" />
-            <img src={project} style={{height:"80%", left:"-10%"}}/>
+            <img src={gradiantbackground} className='project-bgr' style={{ position: 'absolute', height:"100%", zIndex: '-1'}} alt="Gradient Background" />
+            <img src={project} className='project-img'/>
           </div>
         </div>
         <br />
         <div className='project-blocks'>
-          
-          <div className='project-innerblock2'>
-            <img src={gradiantbackground} style={{ position: 'absolute', height:"150%", zIndex: '-1', left:"-150px", top:"-100px" }} alt="Gradient Background" />
-            <img src={project} style={{height:"95%"}}/>
-          </div>
           <div style={{width:"50%"}}>
-            <div style={{fontSize:"30px", fontWeight:"600"}}>
+            <div style={{fontSize:"180%", fontWeight:"600", width:"max-content"}}>
               Example Project
             </div>
-            <div  className='project-innerblock1' style={{left:"-10%"}}>
+            <div  className='project-innerblock1'>
               A web app for visualizing personalized Spotify data. View your
               top artists, top tracks, recently played tracks, and detailed audio
               information about each track. Create and save new playlists of
               recommended tracks based on your existing playlists and more.
             </div>
-            
+            <img src={click} className='project-click'/>
+          </div>
+          <div className='project-innerblock2'>
+            <img src={gradiantbackground} alt="Gradient Background" className='project-bgr' style={{ position: 'absolute', height:"100%", zIndex: '-1'}}/>
+            <img src={project} className='project-img'/>
           </div>
         </div>
+        <div className='project-blocks'>
+          <div style={{width:"50%"}}>
+            <div style={{fontSize:"180%", fontWeight:"600", width:"max-content"}}>
+              Example Project
+            </div>
+            <div  className='project-innerblock1'>
+              A web app for visualizing personalized Spotify data. View your
+              top artists, top tracks, recently played tracks, and detailed audio
+              information about each track. Create and save new playlists of
+              recommended tracks based on your existing playlists and more.
+            </div>
+            <img src={click} className='project-click' />
+          </div>
+          <div className='project-innerblock2'>
+            <img src={gradiantbackground} className='project-bgr' style={{ position: 'absolute', height:"100%", zIndex: '-1'}} alt="Gradient Background" />
+            <img src={project} className='project-img'/>
+          </div>
+        </div>
+        
       </div>
 
     </div>

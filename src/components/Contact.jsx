@@ -8,10 +8,10 @@ const Contact = () => {
       <div className='contact-heading'>
         <h1>Let's Colab</h1>
       </div>
-      <img src={gradiantbackground} style={{ position: 'absolute', height:"100%", zIndex: '0', left:"20%", top:"10%" }} alt="Gradient Background" />
-      <div style={{display:'flex', justifyContent:"space-between"}}>
-        <div style={{width:"40%", paddingTop:"15%"}}>
-          <div className='project-innerblock1'>
+      <img src={gradiantbackground} className='contact-bgr' alt="Gradient Background" />
+      <div className='contactus-block'>
+        <div>
+          <div className='contact-innerblock'>
             I'm currently seeking to be part of a collaborative cross-functional team that prioritizes enhancing people's lives through intuitive and accessible software solutions.
             <br /> <br />
             {/* <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer"> */}

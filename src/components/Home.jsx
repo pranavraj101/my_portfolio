@@ -35,13 +35,13 @@ const Home = () => {
 
   return (
     <div className='home' style={{ position: 'relative' }}>
-      <div style={{ display: 'flex', position: 'absolute', paddingLeft: '150px' }}>
+      <div className='home-name-block' style={{ display: 'flex', position: 'absolute'}}>
         <img src={arrow} alt="Arrow" style={{ height: '80px' }} />
         <div style={{ fontSize: '15px', paddingTop: '10px', color: '#fff', fontFamily: 'Preahvihear' }}>
           Hello! I am <span style={{ color: '#7127BA' }}>Pranav Raj</span>
         </div>
       </div>
-      <div style={{ display: 'flex' }}>
+      <div className="home-blocks">
         <div>
           <img src={gradient} alt="Gradient" style={{ height: '300px', position: 'absolute', zIndex: '-1' }} />
           <img src={image} alt="Image" style={{ height: '200px', zIndex: '1', paddingTop: '40px', paddingLeft: '60px' }} />
@@ -62,7 +62,7 @@ const Home = () => {
           Currently, I'm an Application Developer at Wizphys.IO
         </div>
         <br />
-        <div style={{width:"55vw"}}>
+        <div className='home-dis'>
         🌐 Greetings, fellow wanderers of the binary wilderness! 🚀 I'm your guide through the realms of code, a software sorcerer conjuring digital magic. Dive into my portfolio and witness the spells of innovation cast in every line of code. 🪄✨ Unleash the power of technology and join me on this epic journey where each keystroke is a step into the future! 💻🔮🌟        
         </div>
       </div>

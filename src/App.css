@@ -3,28 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-body, .app-root {
-  /* Firefox */
+/* body-scrollbar.css */
+
+/* Firefox */
+body {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
-
-  /* Webkit browsers (Chrome, Safari) */
-  &::-webkit-scrollbar {
-    width: 5px; /* Set the width as per your preference */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #693B93; /* Set the color of the thumb */
-    border-radius: 15px; /* Set border-radius for a rounded look */
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: #1A0B2E; /* Set the color of the thumb on hover */
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: #11071F; 
-  }
 }
+
+/* Webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  width: 10px; /* Set the width as per your preference */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #693B93; /* Set the color of the thumb */
+  border-radius: 15px; /* Set border-radius for a rounded look */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #1A0B2E; /* Set the color of the thumb on hover */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #11071F; 
+}
+
 
 
 .navbar {
@@ -77,7 +81,7 @@ body, .app-root {
   font-family: "Preahvihear";
   color: #fff;
   padding-top: 70px;
-  padding-left: 100px;
+  padding-left: 10%;
 }
 
 .experience {
@@ -86,7 +90,7 @@ body, .app-root {
   padding-right: 10%;
   height: 100%;
   background-color: #11071F;
-  padding-top: 8vh;
+  padding-top: 10px;
   font-family: "Preahvihear";
   color: #fff;
   z-index: 1;
@@ -104,14 +108,19 @@ body, .app-root {
   display: flex;
   padding: 15px;
   border-radius: 15px;
-  background: linear-gradient(110deg, #130428 19.95%, #251043 67.64%, #38126D 107.08%, #261045 156.61%, #190634 183.21%);
+  /* background: linear-gradient(110deg, #130428 19.95%, #251043 67.64%, #38126D 107.08%, #261045 156.61%, #190634 183.21%); */
   box-shadow: 4px 7px 26px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease-in-out; /* Adding transition for smooth effect */
+}
+
+.workblock:hover {
+  box-shadow: 0px 0px 15px 0px #693B93; /* Change values as needed */
 }
 
 .workbtn {
   border: #693B93 2px solid;
   width: max-content;
-  font-size: 15px;
+  font-size: 80%;
   padding: 3px 12px;
   border-radius: 10px;
   font-family: 'Poppins';
@@ -151,6 +160,30 @@ body, .app-root {
   z-index: 2;
   font-size: 15px;
   font-weight: 400;
+  width: 100%;
+  /* padding-top: 15%; */
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-innerblock1:hover {
+  background-color: #1A0B2E; /* Change the background color on hover */
+  color: #fff; /* Change the text color on hover */
+  box-shadow: 0px 0px 15px 0px #693B93;
+}
+
+.contact-innerblock {
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: 400;
+  width: 60%;
+  /* padding-top: 15%; */
+  margin-bottom: 20px;
 }
 
 .project-innerblock2 {
@@ -168,7 +201,7 @@ body, .app-root {
 
 .contact-us {
   position: relative;
-  padding: 50px 10%;
+  padding: 50px 0;
   color: #fff;
   font-family: "Preahvihear";
   background-color: #11071F;
@@ -177,6 +210,7 @@ body, .app-root {
 
 .contact-heading h1 {
   font-size: 40px;
+  padding-left: 10%;
 }
 
 .gradient-background {
@@ -194,10 +228,13 @@ body, .app-root {
   object-fit: cover;
 }
 
+.home-dis{
+  width: 60%;
+}
 
 .contact-form {
   margin-top: 20px;
-  width: 50%;
+  width: 80%;
 }
 
 form {
@@ -233,12 +270,93 @@ button:hover {
   background-color: #693B93;
 }
 
+.home-blocks{
+  display: flex;
+}
 
-@media (max-width: 768px) {
-  .navbar {
+.home-name-block{
+  padding-left: 10%;
+}
+
+.contactus-block{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.contact-bgr{
+  position: absolute;
+  height: 100%;
+  z-index: 0;
+  left: 20%;
+  top: 10%;
+}
+
+.project-img{
+  height: 350px;
+  left: -10%;
+}
+.project-bgr{
+  position: absolute;
+  height: 290px;
+  z-index: -1;
+  left: -150px;
+  top: -100px;
+}
+
+.project-click{
+  height: 6%;
+  padding: 2%;
+  padding-bottom: 5%;
+}
+
+@media (max-width: 1200px) {
+  .experience-blocks {
+    justify-content: center;
+  }
+
+  .workblock {
+    width: 60%; /* Display two blocks side by side on tablets */
+  }
+  .home-name-block{
+    padding-left: 18%;
+  }
+  
+  .project-blocks{
+    display: block;
+    justify-content: space-between;
+  }
+
+  .project-img{
+    height: 40vw;
+    left: 20%;
+    top: -30px;
+  }
+
+  .project-bgr{
+    position: absolute;
+    height: 300px;
+    z-index: -1;
+    left: 150px;
+    top: -200px;
+  }
+
+  .project-innerblock1 {
+    width: 50vw;
+    /* padding-top: 15%; */
+  }
+  .project-click{
+    display: none;
+  }
+}
+
+
+@media (max-width: 800px) {
+  /* .navbar {
     flex-direction: column;
     align-items: flex-start;
-  }
+  } */
 
   .nav-links {
     margin-top: 10px;
@@ -248,14 +366,65 @@ button:hover {
     margin-right: 0;
     margin-bottom: 10px;
   }
+  .home {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 
+  .home-blocks{
+    display: block;
+  }
+
+  .contactus-block{
+    display: block;
+    justify-content: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  
+  }
+  .contact-bgr{
+    position: absolute;
+    height: 40%;
+    z-index: 0;
+    left: 0%;
+    top: 10%;
+  }
+  .contact-form {
+    margin-top: 20px;
+    width: 80%;
+    padding-left: 3%;
+  }
+
+  .home-name-block{
+    padding-left: 25%;
+  }
+  
+
+  .contact-innerblock {
+    width: 80vw;
+  }
   .experience-blocks {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
   .workblock {
-    width: 100%; /* Adjust the width for smaller screens */
+    width: 100%; /* Display one block per row on smaller screens */
   }
+
+  .home-text {
+    padding-left: 2%;
+  }
+
+  .home-dis{
+    width: 90%;
+  }
+
+  .project-bgr{
+    height: 150px;
+  }
+
+  .project-click{
+    display: none;
+  }
+
 }
